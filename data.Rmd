@@ -1,8 +1,26 @@
 ---
-title: "My Data"
+title: "Methods and Procedures"
 ---
 
-Hello, Website!
+The planned methods for analyzing the Staff Orientation data set include the following:
+•	Comparing summary statistics for the proportion of the population in the data set that has completed the orientation program against the proportion that has not.
+•	Analyzing for effects of independent variables on the dependent variable (orientation completion)
+
+Comparing Summary Statistics
+Examining the summary statistics of potential moderator and mediator variables for the proportion of the population in the data set that has completed the orientation program against the proportion that has not will be a first step in identifying any demographic or socio-economic differences between these groups. The procedure to be used for this comparson of two sample means is the t-test. This test can be used for this data det because it fulfills the following assumptions:
+Measurement of variables follows a continuous or ordinal scale. Any binomial data will be converted into percentages for this procedure.
+The data is collected from a representative, randomly selected portion of the total population. The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program.
+The data is normally distributed. The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.
+The data is from a reasonably large sample size. The sample will include approximately 850-900 observations.
+Homogeneity of variance. Variance will be examined from summary statistics and controlled for if necessary. 
+Rejection of the null hypothesis will be based on achieving the significance level of p ≤ 0.05
+
+Analyzing effects of independent variables on the dependent variable
+The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. The dataset also fulfills the basic assumptions for logistic regression:
+Independence of observations. All observations are assumed to be independent.
+A large sample size. As previously stated, the dataset has approximately 850-900 observations.
+Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05
+
 
 
 ```{r}
