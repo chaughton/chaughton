@@ -313,7 +313,7 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td>Program Information</td>
-<td>complepercent complete</td>
+<td>percent complete</td>
 </tr>
 <tr class="even">
 <td>Socio-economic Factors</td>
@@ -324,6 +324,10 @@ $(document).ready(function () {
 <td>employee status, supervisory status, job, job family,</td>
 </tr>
 <tr class="even">
+<td>FLSA status, salary amount</td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>Supervisor</td>
 <td>employee type, years of service, training history</td>
 </tr>
@@ -355,77 +359,68 @@ Rejection of the null hypotheses for logistic regression tests will also be base
 <h1>Dataset Elements</h1>
 <pre class="r"><code>summary(PSOM_Orientation2)</code></pre>
 <pre><code>##   Penn_ID_prsn       Emp_Status        Emp_ Status_Date  
-##  Min.   :     757   Length:758         Length:758        
-##  1st Qu.:25320281   Class :character   Class :character  
+##  Min.   :10001314   Length:734         Length:734        
+##  1st Qu.:25431073   Class :character   Class :character  
 ##  Median :45721663   Mode  :character   Mode  :character  
-##  Mean   :47079017                                        
-##  3rd Qu.:68533483                                        
+##  Mean   :47169365                                        
+##  3rd Qu.:68517359                                        
 ##  Max.   :89746539                                        
-##                                                          
-##  Full_Part_Time     Exempt_Status         Emp_Age      Emp_Gender       
-##  Length:758         Length:758         Min.   :17.0   Length:758        
-##  Class :character   Class :character   1st Qu.:23.0   Class :character  
-##  Mode  :character   Mode  :character   Median :26.0   Mode  :character  
-##                                        Mean   :30.5                     
-##                                        3rd Qu.:34.0                     
-##                                        Max.   :68.0                     
-##                                        NA&#39;s   :2                        
+##  Full_Part_Time     Exempt_Status         Emp_Age       Emp_Gender       
+##  Length:734         Length:734         Min.   :21.00   Length:734        
+##  Class :character   Class :character   1st Qu.:23.00   Class :character  
+##  Mode  :character   Mode  :character   Median :26.00   Mode  :character  
+##                                        Mean   :30.48                     
+##                                        3rd Qu.:34.00                     
+##                                        Max.   :68.00                     
 ##  Primary_Position_Name Primary_Job_Profile_ID Primary_Job_Profile_Name
-##  Length:758            Min.   :110186         Length:758              
+##  Length:734            Min.   :110186         Length:734              
 ##  Class :character      1st Qu.:320015         Class :character        
 ##  Mode  :character      Median :320086         Mode  :character        
-##                        Mean   :330546                                 
-##                        3rd Qu.:365300                                 
+##                        Mean   :330447                                 
+##                        3rd Qu.:362743                                 
 ##                        Max.   :590053                                 
-##                        NA&#39;s   :1                                      
 ##  Salary_Code        Personnel_Class     Visa_Type        
-##  Length:758         Length:758         Length:758        
+##  Length:734         Length:734         Length:734        
 ##  Class :character   Class :character   Class :character  
 ##  Mode  :character   Mode  :character   Mode  :character  
 ##                                                          
 ##                                                          
 ##                                                          
-##                                                          
 ##  NSO_completion_percent Supervisory_status Assignment_Date   
-##  Min.   :  0.00         Length:758         Length:758        
-##  1st Qu.: 30.77         Class :character   Class :character  
+##  Min.   :  0.00         Length:734         Length:734        
+##  1st Qu.: 46.15         Class :character   Class :character  
 ##  Median :100.00         Mode  :character   Mode  :character  
-##  Mean   : 74.01                                              
+##  Mean   : 75.77                                              
 ##  3rd Qu.:100.00                                              
 ##  Max.   :100.00                                              
-##  NA&#39;s   :1                                                   
 ##  Completion_Date    NSO_Complete_Code number_of_weeks   
-##  Length:758         Min.   :0.0000    Min.   :-6255.43  
-##  Class :character   1st Qu.:0.0000    1st Qu.:-6212.43  
+##  Length:734         Min.   :0.0000    Min.   :-6255.43  
+##  Class :character   1st Qu.:0.0000    1st Qu.:-6204.64  
 ##  Mode  :character   Median :1.0000    Median :    0.57  
-##                     Mean   :0.6988    Mean   :-1876.22  
+##                     Mean   :0.7153    Mean   :-1773.41  
 ##                     3rd Qu.:1.0000    3rd Qu.:    1.86  
 ##                     Max.   :1.0000    Max.   :   52.29  
-##                     NA&#39;s   :1         NA&#39;s   :1         
 ##  Manager_Penn_Id    SUP_Employee_Type  Supervisor_Domains
-##  Min.   :10000923   Length:758         Length:758        
+##  Min.   :10000923   Length:734         Length:734        
 ##  1st Qu.:10130325   Class :character   Class :character  
-##  Median :23893704   Mode  :character   Mode  :character  
-##  Mean   :34369624                                        
-##  3rd Qu.:58327328                                        
+##  Median :24325571   Mode  :character   Mode  :character  
+##  Mean   :34509854                                        
+##  3rd Qu.:59430936                                        
 ##  Max.   :89238237                                        
-##  NA&#39;s   :1                                               
-##  SUP_Job_Code_Description  SUP_Learning   Emp_age_group     
-##  Length:758               Min.   :  0.0   Length:758        
-##  Class :character         1st Qu.:  0.0   Class :character  
-##  Mode  :character         Median :  0.0   Mode  :character  
-##                           Mean   :  1.2                     
-##                           3rd Qu.:  1.0                     
-##                           Max.   :455.0                     
-##                                                             
+##  SUP_Job_Code_Description  SUP_Learning    Emp_age_group     
+##  Length:734               Min.   :0.0000   Length:734        
+##  Class :character         1st Qu.:0.0000   Class :character  
+##  Mode  :character         Median :0.0000   Mode  :character  
+##                           Mean   :0.6131                     
+##                           3rd Qu.:1.0000                     
+##                           Max.   :3.0000                     
 ##  NSO_completion_group NSO_Complete      
-##  Length:758           Length:758        
-##  Class :character     Class :character  
-##  Mode  :character     Mode  :character  
-##                                         
-##                                         
-##                                         
-## </code></pre>
+##  0%        :117       Length:734        
+##  1% to 25% : 33       Class :character  
+##  26% to 50%: 41       Mode  :character  
+##  51% to 75%: 12                         
+##  76% to 99%:  6                         
+##  100%      :525</code></pre>
 </div>
 
 

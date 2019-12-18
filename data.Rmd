@@ -7,10 +7,11 @@ The analysis for effects on the dependent variable *completion status* will incl
 
 Category                | Explanatory Variables
 ----------------------- | --------------------------------------------------------------
-Program Information     |	complepercent complete
-Socio-economic Factors  |	age, gender
-Position                |	employee status, supervisory status, job, job family,                                 | FLSA status, salary amount
-Supervisor              |	employee type, years of service, training history
+Program Information     | percent complete
+Socio-economic Factors  | age, gender
+Position                | employee status, supervisory status, job, job family,                                 
+                        | FLSA status, salary amount
+Supervisor              | employee type, years of service, training history
 
 
 # Methods  
