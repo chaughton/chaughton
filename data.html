@@ -12,7 +12,7 @@
 
 
 
-<title>Methods and Procedures</title>
+<title>Data Analysis Methods</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -295,22 +295,138 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Methods and Procedures</h1>
+<h1 class="title toc-ignore">Data Analysis Methods</h1>
 
 </div>
 
 
-<p>The planned methods for analyzing the Staff Orientation data set include the following: • Comparing summary statistics for the proportion of the population in the data set that has completed the orientation program against the proportion that has not. • Analyzing for effects of independent variables on the dependent variable (orientation completion)</p>
-<p>Comparing Summary Statistics Examining the summary statistics of potential moderator and mediator variables for the proportion of the population in the data set that has completed the orientation program against the proportion that has not will be a first step in identifying any demographic or socio-economic differences between these groups. The procedure to be used for this comparson of two sample means is the t-test. This test can be used for this data det because it fulfills the following assumptions: Measurement of variables follows a continuous or ordinal scale. Any binomial data will be converted into percentages for this procedure. The data is collected from a representative, randomly selected portion of the total population. The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program. The data is normally distributed. The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10. The data is from a reasonably large sample size. The sample will include approximately 850-900 observations. Homogeneity of variance. Variance will be examined from summary statistics and controlled for if necessary. Rejection of the null hypothesis will be based on achieving the significance level of p ≤ 0.05</p>
-<p>Analyzing effects of independent variables on the dependent variable The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. The dataset also fulfills the basic assumptions for logistic regression: Independence of observations. All observations are assumed to be independent. A large sample size. As previously stated, the dataset has approximately 850-900 observations. Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05</p>
-<pre class="r"><code>vector &lt;- c(1,1,3,4,5,6)
-vector2 &lt;- c(2,3,4,5,6,87)
-mean(vector)</code></pre>
-<pre><code>## [1] 3.333333</code></pre>
-<pre class="r"><code>plot(vector, vector2)</code></pre>
-<p><img src="data_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<pre><code>## [1] 3.333333</code></pre>
-<p><img src="data_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="analysis-variables" class="section level1">
+<h1>Analysis Variables</h1>
+<p>The analysis for effects on the dependent variable <em>completion status</em> will include the following variables:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Explanatory Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Program Information</td>
+<td>complepercent complete</td>
+</tr>
+<tr class="even">
+<td>Socio-economic Factors</td>
+<td>age, gender</td>
+</tr>
+<tr class="odd">
+<td>Position</td>
+<td>employee status, supervisory status, job, job family,</td>
+</tr>
+<tr class="even">
+<td>Supervisor</td>
+<td>employee type, years of service, training history</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>The planned methods for analyzing the Staff Orientation data set include the following: * Comparing summary statistics for the proportion of the population in the data set that has completed the orientation program against the proportion that has not. * Analyzing for effects of independent variables on the dependent variable (orientation completion)</p>
+<div id="comparing-summary-statistics" class="section level2">
+<h2>Comparing Summary Statistics</h2>
+<p>Examining the summary statistics of potential moderator and mediator variables for the proportion of the population in the data set that has completed the orientation program against the proportion that has not will be a first step in identifying any demographic or socio-economic differences between these groups. The procedure to be used for this comparson of two sample means is the t-test. This test can be used for this data det because it fulfills the following assumptions:<br />
+<em>Measurement of variables follows a continuous or ordinal scale.</em> Any binomial data will be converted into percentages for this procedure.<br />
+<em>The data is collected from a representative, randomly selected portion of the total population.</em> The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program.<br />
+<em>The data is normally distributed.</em> The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.<br />
+<em>The data is from a reasonably large sample size.</em> The sample will include approximately 850-900 observations.<br />
+<em>Homogeneity of variance.</em> Variance will be examined from summary statistics and controlled for if necessary.<br />
+Rejection of the null hypothesis will be based on achieving the significance level of p ≤ 0.05.</p>
+</div>
+<div id="analyzing-effects-of-independent-variables-on-the-dependent-variable" class="section level2">
+<h2>Analyzing Effects of Independent Variables on the Dependent Variable</h2>
+<p>The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. The dataset also fulfills the basic assumptions for logistic regression:<br />
+<em>Independence of observations.</em> All observations are assumed to be independent.<br />
+<em>A large sample size.</em> As previously stated, the dataset has approximately 850-900 observations.<br />
+Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05</p>
+</div>
+</div>
+<div id="dataset-elements" class="section level1">
+<h1>Dataset Elements</h1>
+<pre class="r"><code>summary(PSOM_Orientation2)</code></pre>
+<pre><code>##   Penn_ID_prsn       Emp_Status        Emp_ Status_Date  
+##  Min.   :     757   Length:758         Length:758        
+##  1st Qu.:25320281   Class :character   Class :character  
+##  Median :45721663   Mode  :character   Mode  :character  
+##  Mean   :47079017                                        
+##  3rd Qu.:68533483                                        
+##  Max.   :89746539                                        
+##                                                          
+##  Full_Part_Time     Exempt_Status         Emp_Age      Emp_Gender       
+##  Length:758         Length:758         Min.   :17.0   Length:758        
+##  Class :character   Class :character   1st Qu.:23.0   Class :character  
+##  Mode  :character   Mode  :character   Median :26.0   Mode  :character  
+##                                        Mean   :30.5                     
+##                                        3rd Qu.:34.0                     
+##                                        Max.   :68.0                     
+##                                        NA&#39;s   :2                        
+##  Primary_Position_Name Primary_Job_Profile_ID Primary_Job_Profile_Name
+##  Length:758            Min.   :110186         Length:758              
+##  Class :character      1st Qu.:320015         Class :character        
+##  Mode  :character      Median :320086         Mode  :character        
+##                        Mean   :330546                                 
+##                        3rd Qu.:365300                                 
+##                        Max.   :590053                                 
+##                        NA&#39;s   :1                                      
+##  Salary_Code        Personnel_Class     Visa_Type        
+##  Length:758         Length:758         Length:758        
+##  Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character  
+##                                                          
+##                                                          
+##                                                          
+##                                                          
+##  NSO_completion_percent Supervisory_status Assignment_Date   
+##  Min.   :  0.00         Length:758         Length:758        
+##  1st Qu.: 30.77         Class :character   Class :character  
+##  Median :100.00         Mode  :character   Mode  :character  
+##  Mean   : 74.01                                              
+##  3rd Qu.:100.00                                              
+##  Max.   :100.00                                              
+##  NA&#39;s   :1                                                   
+##  Completion_Date    NSO_Complete_Code number_of_weeks   
+##  Length:758         Min.   :0.0000    Min.   :-6255.43  
+##  Class :character   1st Qu.:0.0000    1st Qu.:-6212.43  
+##  Mode  :character   Median :1.0000    Median :    0.57  
+##                     Mean   :0.6988    Mean   :-1876.22  
+##                     3rd Qu.:1.0000    3rd Qu.:    1.86  
+##                     Max.   :1.0000    Max.   :   52.29  
+##                     NA&#39;s   :1         NA&#39;s   :1         
+##  Manager_Penn_Id    SUP_Employee_Type  Supervisor_Domains
+##  Min.   :10000923   Length:758         Length:758        
+##  1st Qu.:10130325   Class :character   Class :character  
+##  Median :23893704   Mode  :character   Mode  :character  
+##  Mean   :34369624                                        
+##  3rd Qu.:58327328                                        
+##  Max.   :89238237                                        
+##  NA&#39;s   :1                                               
+##  SUP_Job_Code_Description  SUP_Learning   Emp_age_group     
+##  Length:758               Min.   :  0.0   Length:758        
+##  Class :character         1st Qu.:  0.0   Class :character  
+##  Mode  :character         Median :  0.0   Mode  :character  
+##                           Mean   :  1.2                     
+##                           3rd Qu.:  1.0                     
+##                           Max.   :455.0                     
+##                                                             
+##  NSO_completion_group NSO_Complete      
+##  Length:758           Length:758        
+##  Class :character     Class :character  
+##  Mode  :character     Mode  :character  
+##                                         
+##                                         
+##                                         
+## </code></pre>
+</div>
 
 
 
