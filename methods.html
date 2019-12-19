@@ -12,7 +12,7 @@
 
 
 
-<title>methods</title>
+<title>Methods</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -298,7 +298,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">methods</h1>
+<h1 class="title toc-ignore">Methods</h1>
 
 </div>
 
@@ -309,24 +309,24 @@ $(document).ready(function () {
 <div id="comparing-summary-statistics" class="section level3">
 <h3>Comparing Summary Statistics</h3>
 <p>Examining the summary statistics of potential moderator and mediator variables for the proportion of the population in the data set that has completed the orientation program against the proportion that has not will be a first step in identifying any demographic or socio-economic differences between these groups. The procedure to be used for this comparson of two sample means is the t-test. This test can be used for this data det because it fulfills the following assumptions:</p>
-<p><em>Measurement of variables follows a continuous or ordinal scale.</em> Any binomial data will be converted into percentages for this procedure.</p>
-<p><em>The data is collected from a representative, randomly selected portion of the total population.</em> The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program.</p>
-<p><em>The data is normally distributed.</em> The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.</p>
-<p><em>The data is from a reasonably large sample size.</em> The sample will include approximately 850-900 observations.</p>
-<p><em>Homogeneity of variance.</em> Variance will be examined from summary statistics and controlled for if necessary.<br />
+<p><strong><em>Measurement of variables follows a continuous or ordinal scale.</em></strong> Any binomial data will be converted into percentages for this procedure.</p>
+<p><strong><em>The data is collected from a representative, randomly selected portion of the total population.</em></strong> The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program.</p>
+<p><strong><em>The data is normally distributed.</em></strong> The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.</p>
+<p><strong><em>The data is from a reasonably large sample size.</em></strong> The sample will include approximately 850-900 observations.</p>
+<p><strong><em>Homogeneity of variance.</em></strong> Variance will be examined from summary statistics and controlled for if necessary.<br />
 Rejection of the null hypothesis will be based on achieving the significance level of p ≤ 0.05.</p>
 </div>
 <div id="analyzing-effects-of-independent-variables" class="section level3">
 <h3>Analyzing Effects of Independent Variables</h3>
-<p>The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. The dataset also fulfills the basic assumptions for logistic regression:</p>
-<p><em>Independence of observations.</em> All observations are assumed to be independent.</p>
-<p><em>A large sample size.</em> As previously stated, the dataset has 735 observations.<br />
+<p>The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. Other analyses needed for dependent variables that are continous variables will utilize the simple regression analysis model. The dataset fulfills the basic assumptions for both of these cases:</p>
+<p><strong><em>Independence of observations.</em></strong> All observations are assumed to be independent.</p>
+<p><strong><em>A large sample size.</em></strong> As previously stated, the dataset has 735 observations.<br />
 Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05</p>
 </div>
 </div>
 <div id="analysis-variables" class="section level1">
 <h1>Analysis Variables</h1>
-<p>The analysis for effects on the dependent variable <em>completion status</em> include the following variables:</p>
+<p>The analysis for effects on the dependent variable <strong><em>completion status</em></strong> include the following variables:</p>
 <table>
 <thead>
 <tr class="header">
@@ -345,33 +345,14 @@ Rejection of the null hypotheses for logistic regression tests will also be base
 </tr>
 <tr class="odd">
 <td>Position</td>
-<td>employee status, job, job family, exempt status, salary group</td>
+<td>job family, exempt status, salary group</td>
 </tr>
 <tr class="even">
 <td>Supervisor</td>
-<td>employee type, job description, training history</td>
+<td>employee type, training history</td>
 </tr>
 </tbody>
 </table>
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="methods_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-</div>
 </div>
 
 
