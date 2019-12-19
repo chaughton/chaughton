@@ -320,8 +320,8 @@ $(document).ready(function () {
 <h2>Summary Statistics</h2>
 <div id="program-completion-progress" class="section level3">
 <h3>Program Completion Progress</h3>
-<p><img src="results_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as:</p>
+<p>The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as: <img src="results_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The analysis of results as measured by how much of the program was completed by particpants is summarized in the following tables.</p>
 </div>
 </div>
 <div id="outcome-n-percentage" class="section level2">
@@ -329,19 +329,19 @@ $(document).ready(function () {
 <p>Never Started | 117 | 16.0% Incomplete | 92 | 12.5% Complete | 525 | 71.5%</p>
 <p>A closer look at the Incomplete category shows the breakdown progress as:</p>
 </div>
-<div id="outcome-n-percentage-1" class="section level2">
-<h2>Outcome | n | Percentage</h2>
+<div id="outcomeincomplete-n-percentage" class="section level2">
+<h2>Outcome(Incomplete) | n | Percentage</h2>
 <p>1% to 25% | 33 | 35.9% 26% to 50% | 41 | 44.6% 51% to 75% | 12 | 13.0% 76% to 99% | 6 | 6.5%</p>
 <div id="time-to-start" class="section level3">
 <h3>Time to start</h3>
+<p>The average number of days between assignment of the program to participants and starting the program was 8.15 days.</p>
 <pre class="r"><code>PSOM_Orientation2 %&gt;% summarize(mean(Days_to_access, na.rm = TRUE))</code></pre>
 <pre><code>##   mean(Days_to_access, na.rm = TRUE)
 ## 1                            8.15235</code></pre>
-<p>The average number of days between assignment of the program to participants and starting the program was 8.15 days.</p>
+<p>For those who completed the program, the average time to complete was 17.0 days. This was well within our 30 day expected completion time frame.</p>
 <pre class="r"><code>PSOM_Orientation2 %&gt;% summarize(mean(Days_to_complete, na.rm = TRUE))</code></pre>
 <pre><code>##   mean(Days_to_complete, na.rm = TRUE)
 ## 1                             17.05524</code></pre>
-<p>For those who completed the program, the average time to complete was 17.0 days. This was well within our 30 day expected completion time frame.</p>
 </div>
 </div>
 <div id="analysis-of-variables" class="section level2">
@@ -395,7 +395,7 @@ $(document).ready(function () {
 ## AIC: 889.9
 ## 
 ## Number of Fisher Scoring iterations: 13</code></pre>
-<p>The results of this test indicate the only coefficient with significant results was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.</p>
+<p>The results of this test indicate the only coefficient with significant results <em>(p &lt; .05)</em> was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.</p>
 <pre class="r"><code>PSOM_Orientation2 %&gt;% ggplot(aes(Emp_age_group, NSO_Complete_Code)) + 
         stat_summary(fun.y = mean, geom = &quot;point&quot;, size = 3) + 
         stat_summary(fun.data = mean_se, geom = &quot;errorbar&quot;) +
@@ -407,7 +407,7 @@ $(document).ready(function () {
 <p>This means that we are able to say that the odds of an employee 18-25 years old completing the orientation program was XX% lower than that of an employee 25 to 34 years old.</p>
 </div>
 <div id="summary-of-explanatory-continuous-variables" class="section level3">
-<h3>Summary of explanatory continuous variables</h3>
+<h3>Summary of Explanatory Continuous Variables</h3>
 <p>If the program variables, <em>Days_to_complete</em> and <em>Days_to_access</em> are treated as continuous variables, we can plot them to see if any relationship is present.</p>
 <pre class="r"><code>ggplot(PSOM_Orientation3, aes(x = Days_to_access, y = Days_to_complete)) + 
         geom_point() + geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
@@ -416,7 +416,8 @@ $(document).ready(function () {
         scale_fill_stata(name = &quot;Status&quot;) +
         theme_stata() + scale_color_stata()</code></pre>
 <p><img src="results_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>This plot indicates a positive, linear relationship which is confirmed by running a regression analysis.</p>
+<p>This plot indicates a positive, linear relationship which is confirmed by running a regression analysis. We are 99.9% confident that the relationship between <em>Days_to_complete</em> and <em>Days_to_access</em> is not due to chance. Therefore we reject the null hypothesis that these variables are not equal to zero.</p>
+<p>Finally, we can test the hypothesis that the length of time between when the program is assigned and when it is accessed is associated with the likelihood of completion.</p>
 <pre class="r"><code>summary(lm(Days_to_complete ~ Days_to_access, PSOM_Orientation3))</code></pre>
 <pre><code>## 
 ## Call:
@@ -436,31 +437,7 @@ $(document).ready(function () {
 ## Residual standard error: 11.23 on 507 degrees of freedom
 ## Multiple R-squared:  0.4824, Adjusted R-squared:  0.4813 
 ## F-statistic: 472.4 on 1 and 507 DF,  p-value: &lt; 2.2e-16</code></pre>
-<p>Finally, we can test the hypothesis that the length of time between when the program is associated with the likelihood of completion.</p>
-<pre class="r"><code>summary(glm(NSO_Complete_Code ~ Days_to_access), family = &quot;binomial&quot;)</code></pre>
-<pre><code>## 
-## Call:
-## glm(formula = NSO_Complete_Code ~ Days_to_access)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -0.8624   0.1376   0.1390   0.1461   0.4923  
-## 
-## Coefficients:
-##                  Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)     0.8624125  0.0151268  57.012   &lt;2e-16 ***
-## Days_to_access -0.0014132  0.0006051  -2.336   0.0198 *  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## (Dispersion parameter for gaussian family taken to be 0.1261688)
-## 
-##     Null deviance: 78.282  on 616  degrees of freedom
-## Residual deviance: 77.594  on 615  degrees of freedom
-##   (117 observations deleted due to missingness)
-## AIC: 477.69
-## 
-## Number of Fisher Scoring iterations: 2</code></pre>
+<p>Here too, we observe a significant relationship at the <em>(p &lt; .05)</em> level.</p>
 </div>
 </div>
 

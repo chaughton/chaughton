@@ -3,8 +3,6 @@ title: "Methods"
 output: html_document
 ---
 
-
-# Methods  
 The planned methods for analyzing the Staff Orientation data set include the following:
 * Comparing summary statistics for the proportion of the population in the data set that has completed the orientation program against the proportion that has not.
 * Analyzing for effects of independent variables on the dependent variable (orientation completion)  
@@ -31,7 +29,7 @@ __*Independence of observations.*__ All observations are assumed to be independe
 __*A large sample size.*__ As previously stated, the dataset has 735 observations.  
 Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05
 
-# Analysis Variables
+### Analysis Variables
 The analysis for effects on the dependent variable __*completion status*__ include the following variables:
 
 Category                | Explanatory Variables

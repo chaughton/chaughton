@@ -23,6 +23,7 @@ Access_Date               | Date orientation program first accessed
 Completion_Date           | Date of orientation program completion
 NSO_Complete_Code         | Code for completion status (0=incomplete, 1=complete)
 Days_to_access            | Number of days between assignment date and access date
+Days_to_complete          | Number of days between access date and completion date
 SUP_Employee_Type         | Employee type of supervisor
 SUP_Job_Code_Description	| Job title of supervisor
 SUP_Learning			        | Code for leadership training completed by supervisor

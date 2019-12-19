@@ -11,6 +11,7 @@ t.test(NSO_Complete_Code, mu = 0, alternative = "two.sided")
 ## Summary Statistics
 
 ### Program Completion Progress
+The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as:
 ```{r, echo=FALSE}
 PSOM_Orientation2$NSO_completion_group <- factor(PSOM_Orientation2$NSO_completion_group,levels = c("0%", "1% to 25%", "26% to 50%", "51% to 75%", "76% to 99%", "100%"))
 PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
@@ -18,7 +19,7 @@ PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
         theme_stata() + scale_fill_stata() + scale_color_stata()
 ```
 
-The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as:
+The analysis of results as measured by how much of the program was completed by particpants is summarized in the following tables.
 
 Outcome       |  n  | Percentage
 ----------------------------------
@@ -28,26 +29,24 @@ Complete      | 525 | 71.5%
 
 A closer look at the Incomplete category shows the breakdown progress as:
 
-Outcome       |  n  | Percentage
+Outcome(Incomplete) |  n  | Percentage
 ----------------------------------
-1% to 25%     |  33 | 35.9%
-26% to 50%    |  41 | 44.6%
-51% to 75%    |  12 | 13.0%
-76% to 99%    |   6 |  6.5%
+1% to 25%           |  33 | 35.9%
+26% to 50%          |  41 | 44.6%
+51% to 75%          |  12 | 13.0%
+76% to 99%          |   6 |  6.5%
 
 ### Time to start
-
+The average number of days between assignment of the program to participants and starting the program was 8.15 days.
 ```{r}
 PSOM_Orientation2 %>% summarize(mean(Days_to_access, na.rm = TRUE))
 ```
 
-The average number of days between assignment of the program to participants and starting the program was 8.15 days.
-
+For those who completed the program, the average time to complete was 17.0 days. This was well within our 30 day expected completion time frame.
 ```{r}
 PSOM_Orientation2 %>% summarize(mean(Days_to_complete, na.rm = TRUE))
 ```
 
-For those who completed the program, the average time to complete was 17.0 days. This was well within our 30 day expected completion time frame.
 
 ## Analysis of Variables
 
@@ -62,7 +61,7 @@ summary(glm(NSO_Complete_Code ~ factor(Emp_age_group) +
                     factor(SUP_Learning), family = "binomial", data = PSOM_Orientation2))
 ```
 
-The results of this test indicate the only coefficient with significant results was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.
+The results of this test indicate the only coefficient with significant results *(p < .05)* was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.
 
 ```{r}
 
@@ -78,7 +77,7 @@ PSOM_Orientation2 %>% ggplot(aes(Emp_age_group, NSO_Complete_Code)) +
 
 This means that we are able to say that the odds of an employee 18-25 years old completing the orientation program was XX% lower than that of an employee 25 to 34 years old.
 
-### Summary of explanatory continuous variables
+### Summary of Explanatory Continuous Variables
 
 If the program variables, *Days_to_complete* and *Days_to_access* are treated as continuous variables, we can plot them to see if any relationship is present.
 
@@ -92,15 +91,11 @@ ggplot(PSOM_Orientation3, aes(x = Days_to_access, y = Days_to_complete)) +
 
 ```
 
-This plot indicates a positive, linear relationship which is confirmed by running a regression analysis.
+This plot indicates a positive, linear relationship which is confirmed by running a regression analysis. We are 99.9% confident that the relationship between *Days_to_complete* and *Days_to_access* is not due to chance. Therefore we reject the null hypothesis that these variables are not equal to zero.
 
+Finally, we can test the hypothesis that the length of time between when the program is assigned and when it is accessed is associated with the likelihood of completion.
 ```{r}
 summary(lm(Days_to_complete ~ Days_to_access, PSOM_Orientation3))
 ```
 
-Finally, we can test the hypothesis that the length of time between when the program is associated with the likelihood of completion.
-
-```{r}
-summary(glm(NSO_Complete_Code ~ Days_to_access), family = "binomial")
-```
-
+Here too, we observe a significant relationship at the *(p < .05)* level.
