@@ -12,6 +12,7 @@ t.test(NSO_Complete_Code, mu = 0, alternative = "two.sided")
 
 ### Program Completion Progress
 The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as:
+
 ```{r, echo=FALSE}
 PSOM_Orientation2$NSO_completion_group <- factor(PSOM_Orientation2$NSO_completion_group,levels = c("0%", "1% to 25%", "26% to 50%", "51% to 75%", "76% to 99%", "100%"))
 PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
@@ -21,20 +22,20 @@ PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
 
 The analysis of results as measured by how much of the program was completed by particpants is summarized in the following tables.
 
-Outcome       |  n  | Percentage
+Outcome       |  n (Percentage)
 ----------------------------------
-Never Started | 117 | 16.0%
-Incomplete    |  92 | 12.5%
-Complete      | 525 | 71.5%
+Never Started | 117 (16.0%)
+Incomplete    |  92 (12.5%)
+Complete      | 525 (71.5%)
 
 A closer look at the Incomplete category shows the breakdown progress as:
 
-Outcome(Incomplete) |  n  | Percentage
+Outcome(Incomplete) |  n (Percentage)
 ----------------------------------
-1% to 25%           |  33 | 35.9%
-26% to 50%          |  41 | 44.6%
-51% to 75%          |  12 | 13.0%
-76% to 99%          |   6 |  6.5%
+1% to 25%           |  33 (35.9%)
+26% to 50%          |  41 (44.6%)
+51% to 75%          |  12 (13.0%)
+76% to 99%          |   6  (6.5%)
 
 ### Time to start
 The average number of days between assignment of the program to participants and starting the program was 8.15 days.
@@ -42,7 +43,7 @@ The average number of days between assignment of the program to participants and
 PSOM_Orientation2 %>% summarize(mean(Days_to_access, na.rm = TRUE))
 ```
 
-For those who completed the program, the average time to complete was 17.0 days. This was well within our 30 day expected completion time frame.
+For those who completed the program, the average time to complete was 17.0 days.
 ```{r}
 PSOM_Orientation2 %>% summarize(mean(Days_to_complete, na.rm = TRUE))
 ```
@@ -63,7 +64,7 @@ summary(glm(NSO_Complete_Code ~ factor(Emp_age_group) +
 
 The results of this test indicate the only coefficient with significant results *(p < .05)* was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.
 
-```{r}
+```{r, echo=FALSE}
 
 PSOM_Orientation2 %>% ggplot(aes(Emp_age_group, NSO_Complete_Code)) + 
         stat_summary(fun.y = mean, geom = "point", size = 3) + 
@@ -81,7 +82,7 @@ This means that we are able to say that the odds of an employee 18-25 years old 
 
 If the program variables, *Days_to_complete* and *Days_to_access* are treated as continuous variables, we can plot them to see if any relationship is present.
 
-```{r}
+```{r, echo=FALSE}
 ggplot(PSOM_Orientation3, aes(x = Days_to_access, y = Days_to_complete)) + 
         geom_point() + geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
         labs( x = "Days to Access", y = "Days to Complete", 
