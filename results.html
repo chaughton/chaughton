@@ -12,7 +12,7 @@
 
 
 
-<title>My Results</title>
+<title>Analysis and Results</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -278,6 +278,9 @@ $(document).ready(function () {
   <a href="data.html">Data</a>
 </li>
 <li>
+  <a href="methods.html">Methods</a>
+</li>
+<li>
   <a href="results.html">Results</a>
 </li>
 <li>
@@ -295,12 +298,33 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Results</h1>
+<h1 class="title toc-ignore">Analysis and Results</h1>
 
 </div>
 
 
-<p>Hello, Website!</p>
+<p>Overall, the first year of the program has been a success, with an overall mean completion rate of xx.x%. The t-test for this outcome indicates that the overall results are significant at p &lt; .001.</p>
+<pre class="r"><code>t.test(NSO_Complete_Code, mu = 0, alternative = &quot;two.sided&quot;)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  NSO_Complete_Code
+## t = 42.91, df = 733, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  0.6825345 0.7479832
+## sample estimates:
+## mean of x 
+## 0.7152589</code></pre>
+<div id="distribution-of-results" class="section level2">
+<h2>Distribution of Results</h2>
+<p>The analysis of results as measured by how much of the program was completed by particpants reveals, as expected, a bimodal distribution. Most people either fully completed or never started the program. Only 92 people started, but did not complete the program. This represents 12.5% of the analysis population.</p>
+<p><img src="results_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The average number of days between assignment of the program to participants and starting the program was 8.15 days.</p>
+<pre class="r"><code>PSOM_Orientation2 %&gt;% summarize(mean(Days_to_access, na.rm = TRUE))</code></pre>
+<pre><code>##   mean(Days_to_access, na.rm = TRUE)
+## 1                            8.15235</code></pre>
+</div>
 
 
 

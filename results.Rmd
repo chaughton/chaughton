@@ -1,5 +1,29 @@
 ---
-title: "My Results"
+title: "Analysis and Results"
 ---
 
-Hello, Website!
+Overall, the first year of the program has been a success, with an overall mean completion rate of xx.x%. The t-test for this outcome indicates that the overall results are significant at p < .001.
+
+```{r}
+t.test(NSO_Complete_Code, mu = 0, alternative = "two.sided")
+```
+
+## Distribution of Results
+
+The analysis of results as measured by how much of the program was completed by particpants reveals, as expected, a bimodal distribution. Most people either fully completed or never started the program. Only 92 people started, but did not complete the program. This represents 12.5% of the analysis population.
+
+```{r, echo=FALSE}
+PSOM_Orientation2$NSO_completion_group <- factor(PSOM_Orientation2$NSO_completion_group,levels = c("0%", "1% to 25%", "26% to 50%", "51% to 75%", "76% to 99%", "100%"))
+PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
+        labs(x = "Percent Complete", y = "Count", title = "New Staff Orientation Program", subtitle = "Performance by Percent Complete") + 
+        theme_stata() + scale_fill_stata() + scale_color_stata()
+```
+
+The average number of days between assignment of the program to participants and starting the program was 8.15 days.
+
+```{r}
+PSOM_Orientation2 %>% summarize(mean(Days_to_access, na.rm = TRUE))
+```
+
+
+
