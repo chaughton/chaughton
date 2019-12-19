@@ -402,7 +402,7 @@ $(document).ready(function () {
 </div>
 <div id="summary-of-explanatory-continuous-variables" class="section level3">
 <h3>Summary of Explanatory Continuous Variables</h3>
-<p>If the program variables, <em>Days_to_complete</em> and <em>Days_to_access</em> are treated as continuous variables, we can plot them to see if any relationship is present.</p>
+<p>If the program variables, <em>Days_to_complete</em> and <em>Days_to_access</em> are treated as continuous variables, we can plot them to see if any relationship is present. This plot represents the data set after removing outliers (Days_to_complete &gt; 100).</p>
 <p><img src="results_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>This plot indicates a positive, linear relationship which is confirmed by running a regression analysis. We are 99.9% confident that the relationship between <em>Days_to_complete</em> and <em>Days_to_access</em> is not due to chance. Therefore we reject the null hypothesis that these variables are not equal to zero.</p>
 <p>Finally, we can test the hypothesis that the length of time between when the program is assigned and when it is accessed is associated with the likelihood of completion.</p>

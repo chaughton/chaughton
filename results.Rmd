@@ -31,7 +31,7 @@ Complete      | 525 (71.5%)
 A closer look at the Incomplete category shows the breakdown progress as:
 
 Outcome(Incomplete) |  n (Percentage)
-----------------------------------
+-------------------------------------
 1% to 25%           |  33 (35.9%)
 26% to 50%          |  41 (44.6%)
 51% to 75%          |  12 (13.0%)
@@ -80,7 +80,7 @@ This means that we are able to say that the odds of an employee 18-25 years old 
 
 ### Summary of Explanatory Continuous Variables
 
-If the program variables, *Days_to_complete* and *Days_to_access* are treated as continuous variables, we can plot them to see if any relationship is present.
+If the program variables, *Days_to_complete* and *Days_to_access* are treated as continuous variables, we can plot them to see if any relationship is present. This plot represents the data set after removing outliers (Days_to_complete > 100).
 
 ```{r, echo=FALSE}
 ggplot(PSOM_Orientation3, aes(x = Days_to_access, y = Days_to_complete)) + 
