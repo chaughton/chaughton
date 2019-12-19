@@ -1,5 +1,5 @@
 ---
-title: "methods"
+title: "Methods"
 output: html_document
 ---
 
@@ -12,56 +12,33 @@ The planned methods for analyzing the Staff Orientation data set include the fol
 ### Comparing Summary Statistics
 Examining the summary statistics of potential moderator and mediator variables for the proportion of the population in the data set that has completed the orientation program against the proportion that has not will be a first step in identifying any demographic or socio-economic differences between these groups. The procedure to be used for this comparson of two sample means is the t-test. This test can be used for this data det because it fulfills the following assumptions: 
 
-*Measurement of variables follows a continuous or ordinal scale.* Any binomial data will be converted into percentages for this procedure.  
+__*Measurement of variables follows a continuous or ordinal scale.*__ Any binomial data will be converted into percentages for this procedure.  
 
-*The data is collected from a representative, randomly selected portion of the total population.* The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program. 
+__*The data is collected from a representative, randomly selected portion of the total population.*__ The dataset will include over 99% of the total population, assuming we consider only this specific new staff orientation program. 
 
-*The data is normally distributed.* The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.  
+__*The data is normally distributed.*__ The Central Limit Theorem will be applied by checking the success-failure condition of np ≥ 10 and n(1-p) ≥ 10.  
 
-*The data is from a reasonably large sample size.* The sample will include approximately 850-900 observations.  
+__*The data is from a reasonably large sample size.*__ The sample will include approximately 850-900 observations.  
 
-*Homogeneity of variance.* Variance will be examined from summary statistics and controlled for if necessary.  
+__*Homogeneity of variance.*__ Variance will be examined from summary statistics and controlled for if necessary.  
 Rejection of the null hypothesis will be based on achieving the significance level of p ≤ 0.05.  
 
 ### Analyzing Effects of Independent Variables  
-The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. The dataset also fulfills the basic assumptions for logistic regression:  
+The dependent variable for this study (completion of New Staff Orientation) is binomial, so the appropriate procedure for analyzing the effects of moderator variables and testing for the presence of mediation effects is binary logistic regression. Other analyses needed for dependent variables that are continous variables will utilize the simple regression analysis model. The dataset  fulfills the basic assumptions for both of these cases:  
 
-*Independence of observations.* All observations are assumed to be independent.  
+__*Independence of observations.*__ All observations are assumed to be independent.  
 
-*A large sample size.* As previously stated, the dataset has 735 observations.  
+__*A large sample size.*__ As previously stated, the dataset has 735 observations.  
 Rejection of the null hypotheses for logistic regression tests will also be based on achieving the significance level of p ≤ 0.05
 
 # Analysis Variables
-The analysis for effects on the dependent variable *completion status* include the following variables:
+The analysis for effects on the dependent variable __*completion status*__ include the following variables:
 
 Category                | Explanatory Variables
 ----------------------- | --------------------------------------------------------------
 Program Information     | percent complete, days to access, days to start
 Socio-economic Factors  | age, gender
-Position                | employee status, job, job family, exempt status, salary group 
-Supervisor              | employee type, job description, training history
+Position                | job family, exempt status, salary group 
+Supervisor              | employee type, training history
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
