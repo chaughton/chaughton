@@ -1,9 +1,9 @@
 ---
 title: "Utilization Analysis of Online New Staff Orientation Program"
 ---
-##Charles Haughton
-###Director, Office of Organization Effectiveness
-###Perelman School of Medicine at the University of Pennsylvania
+## Charles Haughton
+### Director, Office of Organization Effectiveness
+### Perelman School of Medicine at the University of Pennsylvania
 
 
 #### Introduction
@@ -20,17 +20,17 @@ This purpose of this project is to perform statistical analyses on available dat
 
 #### Hypotheses
 
-##### H0: There is no evidence for effects of any explanatory variables in the dataset on program completion.
+##### **H0: There is no evidence for effects of any explanatory variables in the dataset on program completion.**
 Our null hypothesis states that we do not expect to find any significant results from the dataset.
 
-##### H1: One or more program-based explanatory variables provide significant evidence for effect on program completion.
+##### **H1: One or more program-based explanatory variables provide significant evidence for effect on program completion.**
 Data regarding when employees were assigned the program, if, and when, they stared the program, and if, and when they completed the program are related to program completion.
 
-##### H2: One or more employee-based explanatory variables provide significant evidence for effect on program completion.
+##### **H2: One or more employee-based explanatory variables provide significant evidence for effect on program completion.**
 Data regarding the demographic profile employees for age and gender are related to program completion.
 
 
-##### H3: One or more program-based explanatory variables provide significant evidence for effect on program completion.
+##### **H3: One or more program-based explanatory variables provide significant evidence for effect on program completion.**
 Data regarding characteristics of the employee's supervisor for employee type and previous leadership training history are related to program completion.
 
 

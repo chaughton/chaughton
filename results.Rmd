@@ -105,4 +105,4 @@ Finally, we can test the hypothesis that the length of time between when the pro
 summary(lm(Days_to_complete ~ Days_to_access, PSOM_Orientation3))
 ```
 
-Here too, we observe a significant relationship at the *(p < .05)* level.
+Here too, we observe a significant relationship at the *(p < .001)* level.

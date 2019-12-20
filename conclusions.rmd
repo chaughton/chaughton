@@ -10,10 +10,12 @@ The two categories that are contributing to the gap in achievement below 95% are
 ### Conclusion 2: We find evidence to support our hypothesis for program-based explanatory variables.
 The second important insight is found in the evidence that the sooner a new employee accesses the orientation program, the more likely they are to complete it. This makes sense intuitively since orientation programs, by definition, are time sensitive. The findings were statistically significant at the p<.05 level. We need to determine how best to “nudge” new employees to begin the orientation within the first week after assignment of the program.
 
-Conclusion 2: We find evidence to support our hypothesis for participant-based explanatory variables.
+### Conclusion 3: We find evidence to support our hypothesis for participant-based explanatory variables.
 The third insight comes from the observation that the youngest employees performed at the lowest level, with a significant difference (p<.05) from the next age group (25-34). This is somewhat concerning given that this age group represented 36.8% of the total sample population, and we need to determine if the rapidly evolving norms and expectations for the design of online experiences in younger generations is affecting their engagement with the program. Further program enhancements may be necessary to effectively reach this age group.
 
-### Conclusion 3: We find no evidence to support our hypothesis for supervisor-based explanatory variables.
+### Conclusion 4: We find no evidence to support our hypothesis for supervisor-based explanatory variables.
 Analysis of these variables provided no significant results.
+
+
 
 These insights are, of course, only contributing factors to the performance gap. We must assume that other factors, not described by the available data, also need to be identified. We should expect that aspects of individual personality, characteristics of the individual’s work 
