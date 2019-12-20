@@ -386,22 +386,14 @@ $(document).ready(function () {
 </tbody>
 </table>
 <pre class="r"><code>summary(PSOM_Orientation2)</code></pre>
-<pre><code>##  ï..Penn_ID_prsn    Emp_Status Emp_.Status_Date Full_Part_Time
-##  Min.   :10001314   A:729      Min.   :39244    F:729         
-##  1st Qu.:25431073   L:  5      1st Qu.:43489    P:  5         
-##  Median :45721663              Median :43619                  
-##  Mean   :47169365              Mean   :43580                  
-##  3rd Qu.:68517359              3rd Qu.:43703                  
-##  Max.   :89746539              Max.   :43787                  
-##                                                               
-##  Exempt_Status         Emp_Age       Emp_Gender       
-##  Length:734         Min.   :21.00   Length:734        
-##  Class :character   1st Qu.:23.00   Class :character  
-##  Mode  :character   Median :26.00   Mode  :character  
-##                     Mean   :30.48                     
-##                     3rd Qu.:34.00                     
-##                     Max.   :68.00                     
-##                                                       
+<pre><code>##  ï..Emp_.Status_Date Exempt_Status         Emp_Age       Emp_Gender       
+##  Min.   :39244       Length:734         Min.   :21.00   Length:734        
+##  1st Qu.:43489       Class :character   1st Qu.:23.00   Class :character  
+##  Median :43619       Mode  :character   Median :26.00   Mode  :character  
+##  Mean   :43580                          Mean   :30.48                     
+##  3rd Qu.:43703                          3rd Qu.:34.00                     
+##  Max.   :43787                          Max.   :68.00                     
+##                                                                           
 ##                      Primary_Position_Name Primary_Job_Profile_ID
 ##  Research Specialist A          :114       Min.   :110186        
 ##  Clinical Research Coordinator A: 83       1st Qu.:320015        
@@ -418,53 +410,45 @@ $(document).ready(function () {
 ##  Clinical Research Assistant B  : 31                           
 ##  Administrative Coordinator     : 24                           
 ##  (Other)                        :393                           
-##  Personnel_Class Visa_Type  NSO_completion_percent Supervisory_status
-##  AP:592          F-1 : 22   Min.   :  0.00         #N/A: 11          
-##  SS:142          H-1B: 16   1st Qu.: 46.15         DUAL:  7          
-##                  H-4 :  3   Median :100.00         UNIV: 27          
-##                  J-2 :  2   Mean   : 75.77         UPHS:  1          
-##                  LPR : 14   3rd Qu.:100.00         NA&#39;s:688          
-##                  TN  :  3   Max.   :100.00                           
-##                  NA&#39;s:674                                            
-##    Assignment_Date     Access_Date    Completion_Date NSO_Complete_Code
-##  11/14/2018: 65    11/15/2018: 17   1/0/1900  :209    Min.   :0.0000   
-##  7/11/2019 : 23    7/15/2019 :  9   11/26/2018:  9    1st Qu.:0.0000   
-##  6/4/2019  : 15    11/13/2019:  7   11/11/2019:  7    Median :1.0000   
-##  1/3/2019  : 14    11/14/2018:  7   12/6/2018 :  7    Mean   :0.7153   
-##  8/7/2019  : 14    6/12/2019 :  7   6/14/2019 :  7    3rd Qu.:1.0000   
-##  6/11/2019 : 13    (Other)   :570   6/18/2019 :  7    Max.   :1.0000   
-##  (Other)   :590    NA&#39;s      :117   (Other)   :488                     
-##  Days_to_complete Days_to_access    Manager_Penn_Id    SUP_Employee_Type
-##  Min.   :  0.00   Min.   : -4.000   Min.   :10000923   #N/A   :  3      
-##  1st Qu.:  3.00   1st Qu.:  1.000   1st Qu.:10130325   HS.EMP : 23      
-##  Median :  8.00   Median :  2.000   Median :24325571   UP.FAC :264      
-##  Mean   : 17.06   Mean   :  8.152   Mean   :34509854   UP.SRS :  3      
-##  3rd Qu.: 17.00   3rd Qu.:  7.000   3rd Qu.:59430936   UP.STAF:441      
-##  Max.   :366.00   Max.   :305.000   Max.   :89238237                    
-##  NA&#39;s   :209      NA&#39;s   :117                                           
-##  Supervisor_Domains             SUP_Job_Code_Description  SUP_Learning   
-##  #N/A:  3           MANAGER RESEARCH PROJECT: 98         Min.   :0.0000  
-##  DUAL:268           PROFESSOR               : 78         1st Qu.:0.0000  
-##  UNIV:433           DIRECTOR D              : 58         Median :0.0000  
-##  UPHS:  4           ASSISTANT PROFESSOR     : 56         Mean   :0.6131  
-##  NA&#39;s: 26           ASSOCIATE PROFESSOR     : 27         3rd Qu.:1.0000  
-##                     DIRECTOR E              : 25         Max.   :3.0000  
-##                     (Other)                 :392                         
+##  Personnel_Class NSO_completion_percent   Assignment_Date     Access_Date 
+##  AP:592          Min.   :  0.00         11/14/2018: 65    11/15/2018: 17  
+##  SS:142          1st Qu.: 46.15         7/11/2019 : 23    7/15/2019 :  9  
+##                  Median :100.00         6/4/2019  : 15    11/13/2019:  7  
+##                  Mean   : 75.77         1/3/2019  : 14    11/14/2018:  7  
+##                  3rd Qu.:100.00         8/7/2019  : 14    6/12/2019 :  7  
+##                  Max.   :100.00         6/11/2019 : 13    (Other)   :570  
+##                                         (Other)   :590    NA&#39;s      :117  
+##    Completion_Date NSO_Complete_Code Days_to_complete Days_to_access   
+##  1/0/1900  :209    Min.   :0.0000    Min.   :  0.00   Min.   : -4.000  
+##  11/26/2018:  9    1st Qu.:0.0000    1st Qu.:  3.00   1st Qu.:  1.000  
+##  11/11/2019:  7    Median :1.0000    Median :  8.00   Median :  2.000  
+##  12/6/2018 :  7    Mean   :0.7153    Mean   : 17.06   Mean   :  8.152  
+##  6/14/2019 :  7    3rd Qu.:1.0000    3rd Qu.: 17.00   3rd Qu.:  7.000  
+##  6/18/2019 :  7    Max.   :1.0000    Max.   :366.00   Max.   :305.000  
+##  (Other)   :488                      NA&#39;s   :209      NA&#39;s   :117      
+##  SUP_Employee_Type             SUP_Job_Code_Description  SUP_Learning   
+##  #N/A   :  3       MANAGER RESEARCH PROJECT: 98         Min.   :0.0000  
+##  HS.EMP : 23       PROFESSOR               : 78         1st Qu.:0.0000  
+##  UP.FAC :264       DIRECTOR D              : 58         Median :0.0000  
+##  UP.SRS :  3       ASSISTANT PROFESSOR     : 56         Mean   :0.6131  
+##  UP.STAF:441       ASSOCIATE PROFESSOR     : 27         3rd Qu.:1.0000  
+##                    DIRECTOR E              : 25         Max.   :3.0000  
+##                    (Other)                 :392                         
 ##  Emp_age_group      NSO_completion_group NSO_Complete      
-##  Length:734         0%        :117       Length:734        
-##  Class :character   1% to 25% : 33       Class :character  
-##  Mode  :character   26% to 50%: 41       Mode  :character  
-##                     51% to 75%: 12                         
-##                     76% to 99%:  6                         
-##                     100%      :525                         
+##  Length:734         Length:734           Length:734        
+##  Class :character   Class :character     Class :character  
+##  Mode  :character   Mode  :character     Mode  :character  
 ##                                                            
-##  access_days_group completion_days_group
-##  0 to 5  :429      0 to 5  :198         
-##  6 to 10 : 10      6 to 30 :266         
-##  11 to 15:  5      31 to 50: 27         
-##  16+     :  0      51+     :  0         
-##  NA&#39;s    :290      NA&#39;s    :243         
-##                                         
+##                                                            
+##                                                            
+##                                                            
+##  access_days_group  completion_days_group
+##  Length:734         Length:734           
+##  Class :character   Class :character     
+##  Mode  :character   Mode  :character     
+##                                          
+##                                          
+##                                          
 ## </code></pre>
 </div>
 

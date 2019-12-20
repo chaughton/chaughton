@@ -28,7 +28,7 @@ Never Started | 117 (16.0%)
 Incomplete    |  92 (12.5%)
 Complete      | 525 (71.5%)
 
-A closer look at the Incomplete category shows the breakdown progress as:
+A closer look at the Incomplete category shows the breakdown of progress as:
 
 Outcome(Incomplete) |  n (Percentage)
 --------------------|----------------

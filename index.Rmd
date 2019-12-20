@@ -6,6 +6,8 @@ title: "Utilization Analysis of Online New Staff Orientation Program"
 ### Perelman School of Medicine at the University of Pennsylvania
 
 
+
+
 #### Introduction
 The Perelman School of Medicine (PSOM) at the University of Pennsylvania offers an orientation program for its University employees who are working within PSOM for the first time. This program is designated for staff only (vs. faculty) and is supplemental to the New Staff Orientation Program provided by the University to all new staff employees. PSOM processes approximately 900 new hires each year.
 
@@ -14,7 +16,7 @@ In November of 2018, a revised orientation program, designed completely as an on
 #### Research Question
 *Is there significant evidence in the available dataset to identify possible sources of the gap between the current completion rate of the New Staff Orientation Program and the target 95% completion rate?*
 
-#### Theoretical Motivation
+#### Motivation
 
 This purpose of this project is to perform statistical analyses on available data related to the New Staff Orientation Program to provide insight into the characteristic profile of the proportion of individuals who have completed the orientation, as well as the proportion that did not. These insights would inform the design of future program revisions and enhancements with the goal of achieving a 95% overall program completion rate.
 
@@ -32,5 +34,16 @@ Data regarding the demographic profile employees for age and gender are related 
 
 ##### **H3: One or more program-based explanatory variables provide significant evidence for effect on program completion.**
 Data regarding characteristics of the employee's supervisor for employee type and previous leadership training history are related to program completion.
+
+
+
+
+###### **References**
+
+Bauer, T. N., & Erdogan, B. (2011). Organizational socialization: The effective onboarding of new employees. In S. Zedeck (Ed.), *APA handbooks in psychology®. APA handbook of industrial and organizational psychology, Vol. 3. Maintaining, expanding, and contracting the organization* (p. 51–64). American Psychological Association. https://doi.org/10.1037/12171-002
+
+Graybill, J. O., Taesil Hudson Carpenter, M., Offord Jr, J., Piorun, M., & Shaffer, G. (2013). Employee onboarding: Identification of best practices in ACRL libraries. *Library Management*, 34(3), 200-218.
+
+Klein, H. J., Polin, B., & Leigh Sutton, K. (2015). Specific onboarding practices for the socialization of new employees. *International Journal of Selection and Assessment*, 23(3), 263-283.
 
 
