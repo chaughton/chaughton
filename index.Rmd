@@ -1,15 +1,36 @@
 ---
 title: "Utilization Analysis of Online New Staff Orientation Program"
 ---
+##Charles Haughton
+###Director, Office of Organization Effectiveness
+###Perelman School of Medicine at the University of Pennsylvania
 
+
+#### Introduction
 The Perelman School of Medicine (PSOM) at the University of Pennsylvania offers an orientation program for its University employees who are working within PSOM for the first time. This program is designated for staff only (vs. faculty) and is supplemental to the New Staff Orientation Program provided by the University to all new staff employees. PSOM processes approximately 900 new hires each year.
 
-In November of 2018, a revised orientation program delivered completely as an online experience was launched as a replacement for the previous instructor-led program that was offered on a bi-monthly basis. The primary objectives of the program redesign were to 1) provide the orientation experience as close as possible to the employment start date, 2) increase the total proportion of new staff hires completing PSOM orientation, and 3) reduce the direct cost and administrative effort associated with the old program. To date, over 700 individuals have qualified to enroll in the new program as a new staff hire.
+In November of 2018, a revised orientation program, designed completely as an online experience, was launched as a replacement for the previous instructor-led program that was offered on a bi-monthly basis. The primary objectives of the program redesign were to 1) provide the orientation experience as close as possible to the employment start date, 2) increase the total proportion of new staff hires completing PSOM orientation to 95%, and 3) reduce the direct cost and administrative effort associated with the previous program. To date, over 700 individuals have qualified to enroll in the new program as a new staff hire.
 
-## Research Question
+#### Research Question
+*Is there significant evidence in the available dataset to identify possible sources of the gap between the current completion rate of the New Staff Orientation Program and the target 95% completion rate?*
+
+#### Theoretical Motivation
+
+This purpose of this project is to perform statistical analyses on available data related to the New Staff Orientation Program to provide insight into the characteristic profile of the proportion of individuals who have completed the orientation, as well as the proportion that did not. These insights would inform the design of future program revisions and enhancements with the goal of achieving a 95% overall program completion rate.
+
+####Hypotheses
+
+#####H0: There is no evidence for effects of any explanatory variables in the dataset on program completion.
+Our null hypothesis states that we do not expect to find any significant results from the dataset.
+
+#####H1: One or more program-based explanatory variables provide significant evidence for effect on program completion.
+Data regarding when employees were assigned the program, if, and when, they stared the program, and if, and when they completed the program are related to program completion.
+
+#####H2: One or more employee-based explanatory variables provide significant evidence for effect on program completion.
+Data regarding the demographic profile employees for age and gender are related to program completion.
 
 
-## Theoretical Motivation
+#####H3: One or more program-based explanatory variables provide significant evidence for effect on program completion.
+Data regarding characteristics of the employee's supervisor for employee type and previous leadership training history are related to program completion.
 
-This project is an opportunity to perform statistical analyses that provide insight into the characteristic profile of the proportion of individuals who have completed the orientation, as well as the proportion that did not, to inform future program revisions that result in a 95% overall program completion rate within three weeks of the employment start date. 
 

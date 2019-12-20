@@ -323,16 +323,56 @@ $(document).ready(function () {
 <p>The analysis of results as measured by how much of the program was completed by particpants shows the breakdowm of performance as:</p>
 <p><img src="results_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>The analysis of results as measured by how much of the program was completed by particpants is summarized in the following tables.</p>
-</div>
-</div>
-<div id="outcome-n-percentage" class="section level2">
-<h2>Outcome | n (Percentage)</h2>
-<p>Never Started | 117 (16.0%) Incomplete | 92 (12.5%) Complete | 525 (71.5%)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th>n Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Never Started</td>
+<td>117 (16.0%)</td>
+</tr>
+<tr class="even">
+<td>Incomplete</td>
+<td>92 (12.5%)</td>
+</tr>
+<tr class="odd">
+<td>Complete</td>
+<td>525 (71.5%)</td>
+</tr>
+</tbody>
+</table>
 <p>A closer look at the Incomplete category shows the breakdown progress as:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome(Incomplete)</th>
+<th>n (Percentage)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1% to 25%</td>
+<td>33 (35.9%)</td>
+</tr>
+<tr class="even">
+<td>26% to 50%</td>
+<td>41 (44.6%)</td>
+</tr>
+<tr class="odd">
+<td>51% to 75%</td>
+<td>12 (13.0%)</td>
+</tr>
+<tr class="even">
+<td>76% to 99%</td>
+<td>6 (6.5%)</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="outcomeincomplete-n-percentage" class="section level2">
-<h2>Outcome(Incomplete) | n (Percentage)</h2>
-<p>1% to 25% | 33 (35.9%) 26% to 50% | 41 (44.6%) 51% to 75% | 12 (13.0%) 76% to 99% | 6 (6.5%)</p>
 <div id="time-to-start" class="section level3">
 <h3>Time to start</h3>
 <p>The average number of days between assignment of the program to participants and starting the program was 8.15 days.</p>
@@ -396,9 +436,9 @@ $(document).ready(function () {
 ## AIC: 889.9
 ## 
 ## Number of Fisher Scoring iterations: 13</code></pre>
-<p>The results of this test indicate the only coefficient with significant results <em>(p &lt; .05)</em> was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.</p>
-<p><img src="results_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>This means that we are able to say that the odds of an employee 18-25 years old completing the orientation program was XX% lower than that of an employee 25 to 34 years old.</p>
+<p>The results of this test indicate the only coefficient with significant results <em>(p &lt; .05)</em> was for Employees ages 25 to 34. This means that we are able to say that the predict completion rate for an employee 18-25 years old is 4.6 points lower than that of an employee 25 to 34 years old.</p>
+<p>A plot of the means with confidence intervals helps to see the source of this effect. The larger confidence intervals for the higher age categories reflect the increased variability resulting from the smaller number of observations in these categories.</p>
+<p><img src="results_files/figure-html/unnamed-chunk-6-1.png" width="672" /><img src="results_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
 </div>
 <div id="summary-of-explanatory-continuous-variables" class="section level3">
 <h3>Summary of Explanatory Continuous Variables</h3>

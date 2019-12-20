@@ -22,8 +22,8 @@ PSOM_Orientation2 %>% ggplot(aes(x = NSO_completion_group)) + geom_bar() +
 
 The analysis of results as measured by how much of the program was completed by particpants is summarized in the following tables.
 
-Outcome       |  n (Percentage)
-----------------------------------
+Outcome       |  n Percentage
+--------------|-------------------
 Never Started | 117 (16.0%)
 Incomplete    |  92 (12.5%)
 Complete      | 525 (71.5%)
@@ -31,7 +31,7 @@ Complete      | 525 (71.5%)
 A closer look at the Incomplete category shows the breakdown progress as:
 
 Outcome(Incomplete) |  n (Percentage)
--------------------------------------
+--------------------|----------------
 1% to 25%           |  33 (35.9%)
 26% to 50%          |  41 (44.6%)
 51% to 75%          |  12 (13.0%)
@@ -62,7 +62,9 @@ summary(glm(NSO_Complete_Code ~ factor(Emp_age_group) +
                     factor(SUP_Learning), family = "binomial", data = PSOM_Orientation2))
 ```
 
-The results of this test indicate the only coefficient with significant results *(p < .05)* was for Employees ages 25 to 34. A plot of the means with confidence intervals helps to see the source of this effect.
+The results of this test indicate the only coefficient with significant results *(p < .05)* was for Employees ages 25 to 34. This means that we are able to say that the predict completion rate for an employee 18-25 years old is 4.6 points lower than that of an employee 25 to 34 years old.
+
+A plot of the means with confidence intervals helps to see the source of this effect. The larger confidence intervals for the higher age categories reflect the increased variability resulting from the smaller number of observations in these categories.
 
 ```{r, echo=FALSE}
 
@@ -73,10 +75,14 @@ PSOM_Orientation2 %>% ggplot(aes(Emp_age_group, NSO_Complete_Code)) +
         title = "New Staff Orientation Program - Age Group vs. Completion", 
         subtitle = "Error Bar using mean as center with Confidence Intervals") +
         theme_stata() + scale_color_stata()
+
+ggplot(PSOM_Orientation2, aes(Emp_age_group)) + geom_bar(aes(fill = NSO_Complete), position = "dodge") +
+        labs( x = "Age Group", y = "Count", title = "New Staff Orientation Program", subtitle = "Completion Performance by Age Group") + 
+        scale_fill_stata(name = "Status") +
+        theme_stata() + scale_color_stata()
+
 ```
 
-
-This means that we are able to say that the odds of an employee 18-25 years old completing the orientation program was XX% lower than that of an employee 25 to 34 years old.
 
 ### Summary of Explanatory Continuous Variables
 

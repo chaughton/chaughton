@@ -34,7 +34,7 @@ The analysis for effects on the dependent variable __*completion status*__ inclu
 Category                | Explanatory Variables
 ----------------------- | --------------------------------------------------------------
 Program Information     | percent complete, days to access, days to start
-Socio-economic Factors  | age, gender
+Demographic Factors     | age, gender
 Position                | job family, exempt status, salary group 
 Supervisor              | employee type, training history
 
