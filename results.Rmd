@@ -43,6 +43,7 @@ The average number of days between assignment of the program to participants and
 PSOM_Orientation2 %>% summarize(mean(Days_to_access, na.rm = TRUE))
 ```
 
+### Time to complete
 For those who completed the program, the average time to complete was 17.0 days.
 ```{r}
 PSOM_Orientation2 %>% summarize(mean(Days_to_complete, na.rm = TRUE))
