@@ -4,18 +4,18 @@ title: "Conclusions"
 
 The transition to a new online new staff orientation program is off to a good start with an overall completion rate of 71.5% in its first year. As the focus shifts from implementation to continuous improvement, the goal becomes reaching of a 95% completion rate. The analysis of performance data from this first year is important in determining the priority actions to be undertaken towards achieving that goal. There were several key insights that may be useful for further exploration.
 
-### Conclusion 1: Performance gap is divided into two categories.
+#### Conclusion 1: Performance gap is divided into two categories.
 The two categories that are contributing to the gap in achievement below 95% are relatively equivalent. The proportion of participants that started but did not complete the program was 12.5% and the proportion that never started the program was 16%. Since we expect to see a similar number of new hires annually for the foreseeable future, we will need to achieve completions from approximately 200 more employees annually. The strategies developed for this segment of the population must take into account the differences in behavior between the “incompletes” and the “never started”, as there may be different mechanisms at work for these groups.
 
-### Conclusion 2: We find evidence to support our hypothesis for program-based explanatory variables.
+#### Conclusion 2: We find evidence to support our hypothesis for program-based explanatory variables.
 The second important insight is found in the evidence that the sooner a new employee accesses the orientation program, the more likely they are to complete it. This makes sense intuitively since orientation programs, by definition, are time sensitive. The findings were statistically significant at the p<.05 level. We need to determine how best to “nudge” new employees to begin the orientation within the first week after assignment of the program.
 
-### Conclusion 3: We find evidence to support our hypothesis for participant-based explanatory variables.
+#### Conclusion 3: We find evidence to support our hypothesis for participant-based explanatory variables.
 The third insight comes from the observation that the youngest employees performed at the lowest level, with a significant difference (p<.05) from the next age group (25-34). This is somewhat concerning given that this age group represented 36.8% of the total sample population, and we need to determine if the rapidly evolving norms and expectations for the design of online experiences in younger generations is affecting their engagement with the program. Further program enhancements may be necessary to effectively reach this age group.
 
-### Conclusion 4: We find no evidence to support our hypothesis for supervisor-based explanatory variables.
+#### Conclusion 4: We find no evidence to support our hypothesis for supervisor-based explanatory variables.
 Analysis of these variables provided no significant results.
-
-
-
+  
+  
+  
 These insights are, of course, only contributing factors to the performance gap. We must assume that other factors, not described by the available data, also need to be identified. We should expect that aspects of individual personality, characteristics of the individual’s work 

@@ -4,8 +4,10 @@ title: "Utilization Analysis of Online New Staff Orientation Program"
 ## Charles Haughton
 ### Director, Office of Organization Effectiveness
 ### Perelman School of Medicine at the University of Pennsylvania
-
-
+***
+  
+  
+  
 
 
 #### Introduction
@@ -34,10 +36,10 @@ Data regarding the demographic profile employees for age and gender are related 
 
 ##### **H3: One or more program-based explanatory variables provide significant evidence for effect on program completion.**
 Data regarding characteristics of the employee's supervisor for employee type and previous leadership training history are related to program completion.
-
-
-
-
+  
+  
+  
+***
 ###### **References**
 
 Bauer, T. N., & Erdogan, B. (2011). Organizational socialization: The effective onboarding of new employees. In S. Zedeck (Ed.), *APA handbooks in psychology®. APA handbook of industrial and organizational psychology, Vol. 3. Maintaining, expanding, and contracting the organization* (p. 51–64). American Psychological Association. https://doi.org/10.1037/12171-002
